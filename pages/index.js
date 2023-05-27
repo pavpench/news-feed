@@ -19,13 +19,12 @@ export default function Home() {
       path: "popular",
     },
   ];
-  const [query, getQuery] = useState();
+  const [searchQuery, getSearchQuery] = useState();
   const router = useRouter();
-  const handleOnChange = (e) => getQuery(e.target.value);
+  const handleOnChange = (e) => getSearchQuery(e.target.value);
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    router.push(`/news/${query}`);
-    console.log(query);
+    router.push(`/news/${searchQuery}`);
   };
 
   return (
