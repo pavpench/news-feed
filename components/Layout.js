@@ -1,4 +1,6 @@
 import Link from "next/link";
+import styles from "../styles/Layout.module.css";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   const links = [
@@ -7,18 +9,22 @@ export default function Layout({ children }) {
     { title: "Popular", path: "/news/popular" },
     { title: "Sections", path: "/sections" },
   ];
+
+  const router = useRouter();
   return (
-    <>
-      <div className="header-nav">
+    <div className={styles.container}>
+      <div className={styles.headerNav}>
         {links.map((link) => {
+          const className =
+            link.path === router.asPath ? styles.active : styles.link;
           return (
-            <Link key={link.path} href={link.path}>
+            <Link key={link.path} href={link.path} className={className}>
               {link.title}
             </Link>
           );
         })}
       </div>
       {children}
-    </>
+    </div>
   );
 }

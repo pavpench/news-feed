@@ -1,0 +1,31 @@
+.container {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+.headerNav {
+  margin: 0.7rem;
+  height: 2rem;
+  padding: 3px;
+}
+
+.link {
+  margin: 1rem;
+  color: black;
+  padding: 0.7rem;
+}
+
+.link:hover {
+  color: darkslategray;
+  text-decoration: underline;
+  border: 1px solid darkslategray;
+  border-radius: 9%;
+}
+
+.active {
+  padding: 1rem;
+  font-weight: 700;
+  color: darkslategray;
+  text-decoration: underline;
+  border: 1px solid darkslategray;
+  border-radius: 9%;
+}
