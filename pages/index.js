@@ -11,12 +11,17 @@ export default function Home() {
     {
       title: "Top Stories",
       desc: "Read articles currently on the homepage of the New York times",
-      path: "top-stories",
+      path: "news/top-stories",
     },
     {
       title: "Popular",
       desc: "Read the most popular articles on the New York Times",
-      path: "popular",
+      path: "news/popular",
+    },
+    {
+      title: "Sections",
+      desc: "Get an up-to-the-minute stream of published articles",
+      path: "sections",
     },
   ];
 
@@ -48,10 +53,7 @@ export default function Home() {
         <div className={styles.grid}>
           {links.map((link) => {
             return (
-              <Link
-                key={link.path}
-                href={`news/${link.path}`}
-                className={styles.card}>
+              <Link key={link.path} href={link.path} className={styles.card}>
                 <h2>{link.title} &rarr;</h2>
                 <p>{link.desc}</p>
               </Link>
