@@ -5,6 +5,7 @@ export default function Layout({ children }) {
     { title: "Home", path: "/" },
     { title: "Top Stories", path: "/news/top-stories" },
     { title: "Popular", path: "/news/popular" },
+    { title: "Sections", path: "/sections" },
   ];
   return (
     <>
