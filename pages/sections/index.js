@@ -17,13 +17,9 @@ export default function Sections({ results, title }) {
         <h1>{title}</h1>
         <ul>
           {results?.map((result) => (
-            <li key={result.display_name}>
-              <Link
-                href={`sections/${result.section}`}
-                rel="noopener noreferrer">
-                {result.display_name}
-              </Link>
-            </li>
+            <Link href={`sections/${result.section}`} rel="noopener noreferrer">
+              {result.display_name}
+            </Link>
           ))}
         </ul>
       </main>

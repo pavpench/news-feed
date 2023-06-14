@@ -3,8 +3,8 @@
 import { handler } from "../api/index";
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "@/components/Layout";
-import List from "@/components/List";
+import Layout from "components/Layout";
+import List from "components/List";
 
 export default function News(props) {
   return (
@@ -26,7 +26,6 @@ export default function News(props) {
           ))}
         </ul>
       </main> */}
-
       <List {...props} />
     </Layout>
   );
