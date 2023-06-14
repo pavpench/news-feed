@@ -9,10 +9,16 @@ export default function List({ results, title }) {
       <ul className={styles.list}>
         {results?.map(({ title, url, uri, img }) => {
           return (
-            <Link key={uri} href={url} rel="noreferrer nofollower">
-              {/* {Image} */}
-              {title}
-            </Link>
+            <>
+              <Image src={img} alt={title} width="75" height="75" />
+              <Link
+                key={uri}
+                href={url}
+                rel="noreferrer nofollower"
+                className={styles.card}>
+                {title}
+              </Link>
+            </>
           );
         })}
       </ul>
