@@ -1,9 +1,8 @@
-//Dynamic route
-
+import Link from "next/link";
 import Layout from "../../components/Layout";
 import { search } from "../api/index";
 
-export default function News({ results, searchQuery }) {
+export default function Search_News({ results, searchQuery }) {
   return (
     <Layout>
       <h1>Search: {searchQuery}</h1>
@@ -11,9 +10,9 @@ export default function News({ results, searchQuery }) {
         {results.map((result) => {
           return (
             <li key={result.url}>
-              <a href={result.url} target="_blank" rel="noopener noreferrer">
+              <Link href={result.url} target="_blank" rel="noopener noreferrer">
                 {result.title}
-              </a>
+              </Link>
             </li>
           );
         })}

@@ -19,12 +19,13 @@ export default function Home() {
       path: "popular",
     },
   ];
+
   const [searchQuery, getSearchQuery] = useState();
   const router = useRouter();
   const handleOnChange = (e) => getSearchQuery(e.target.value);
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    router.push(`/news/${searchQuery}`);
+    router.push(`/search/${searchQuery}`);
   };
 
   return (
@@ -38,9 +39,12 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>News Feed</h1>
 
+        {/* Search form  */}
         <form onSubmit={handleOnSubmit}>
           <input type="text" onChange={handleOnChange} />
         </form>
+
+        {/* Navigation Cards */}
         <div className={styles.grid}>
           {links.map((link) => {
             return (
