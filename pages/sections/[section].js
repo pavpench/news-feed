@@ -34,14 +34,14 @@ export async function getStaticPaths() {
 }
 
 //Prerender data on request time based on user input
-export async function getStaticProps({ params }) {
-  const TOP_STORIES_URL = `https://api.nytimes.com/svc/news/v3/content/nyt/${params.section}.json?api-key=${API_KEY}`;
+// export async function getStaticProps({ params }) {
+//   const TOP_STORIES_URL = `https://api.nytimes.com/svc/news/v3/content/nyt/${params.section}.json?api-key=${API_KEY}`;
 
-  const results = await handler(TOP_STORIES_URL);
-  return {
-    props: {
-      results: results,
-      title: "Section: " + params.section,
-    },
-  };
-}
+//   const results = await handler(TOP_STORIES_URL);
+//   return {
+//     props: {
+//       results: results,
+//       title: "Section: " + params.section,
+//     },
+//   };
+// }
