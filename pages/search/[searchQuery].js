@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import { search } from "../api/index";
+import List from "@/components/List";
 
-export default function Search_News({ results, searchQuery }) {
+export default function Search_News(props) {
   return (
     <Layout>
-      <h1>Search: {searchQuery}</h1>
+      {/* <h1>Search: {searchQuery}</h1>
       <ul>
         {results.map((result) => {
           return (
@@ -16,7 +17,8 @@ export default function Search_News({ results, searchQuery }) {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
+      <List {...props} />
     </Layout>
   );
 }
