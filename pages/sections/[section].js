@@ -38,9 +38,10 @@ export async function getStaticProps({ params }) {
   const TOP_STORIES_URL = `https://api.nytimes.com/svc/news/v3/content/nyt/${params.section}.json?api-key=${API_KEY}`;
 
   const results = await handler(TOP_STORIES_URL);
+  const formatedResults = JSON.parse(results);
   return {
     props: {
-      results: results,
+      results: formatedResults,
       title: "Section: " + params.section,
     },
   };
