@@ -18,11 +18,6 @@ export default function Home() {
       desc: "Read the most popular articles on the New York Times",
       path: "news/popular",
     },
-    {
-      title: "Sections",
-      desc: "Get an up-to-the-minute stream of published articles",
-      path: "sections",
-    },
   ];
 
   const [searchQuery, getSearchQuery] = useState();
